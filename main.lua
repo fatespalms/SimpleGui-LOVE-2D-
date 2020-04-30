@@ -29,7 +29,7 @@ function love.update(dt)
 end
 
 function love.draw()
-    gui.draw()
+    gui.draw() 
 end
 
 function love.mousepressed(x,y,button,istouch)
