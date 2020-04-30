@@ -1,2 +1,2 @@
-# SimpleGui-LOVE-2D-
-SimpleGui is library for love2d that provides simple gui like buttons and etc.
+# Simply Library 
+a love2d libary for beginners <3 
