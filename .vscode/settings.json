@@ -1,0 +1,12 @@
+{
+    "Lua.completion.callSnippet": "Replace",
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "Lua.diagnostics.globals": [
+        "love"
+    ],
+    "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "trailing-space"
+    ],
+    "lövelauncher.path": "C:\\Program Files\\LOVE\\lovec.exe"
+}
