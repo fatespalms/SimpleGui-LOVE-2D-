@@ -1,2 +1,2 @@
 # Simply Library 
-a love2d libary for beginners <3 
+Loved2d Beginners Library.
