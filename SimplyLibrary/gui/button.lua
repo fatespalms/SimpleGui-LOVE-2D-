@@ -1,6 +1,6 @@
 --[[@@
     GUI ADD NEW BUTTON 
-    var = gui.newButton({x = x , y = y, w = w, h = h, image = image or nil, quad = quad or nil , func = function()  end})
+    var = SimplyLibrary.gui.newButton({x = x , y = y, w = w, h = h, image = image or nil, quad = quad or nil , func = function()  end})
     
     to use different buttons do in func()
     func = function(buttons) --@@ to access button keypressed
@@ -8,7 +8,7 @@
     x ,y ,w ,h ,image ,quad ,func
 @@]]
 
-function gui.newButton(params) 
+function SimplyLibrary.gui.newButton(params) 
     --@@ INIT
     local b = {}
     --@@ TYPE
@@ -32,13 +32,12 @@ function gui.newButton(params)
     function b:released(button)
        params.released(button)       
     end
-    --@@ INSERT IN TO COMPONENTS
-    table.insert(gui.components,b)
+
     --@@ STORES THE VALUES INTO THE VAR
-    return gui.insertComponent(b)
+    return SimplyLibrary.gui.insertComponent(b)
 end
 
-function gui.newButtonDraw(component)
+function SimplyLibrary.gui.newButtonDraw(component)
     if component.type == "button" then
         if component.quad ~= nil and component.image ~= nil then
             love.graphics.draw(component.image,component.quad,component.x,component.y)

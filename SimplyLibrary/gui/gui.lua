@@ -1,41 +1,37 @@
 
-gui = {} --inits
-gui.components = {} -- stores components
-
---@@ COMPONENTS
-require (_G.libs_path.."gui.button")
-require (_G.libs_path.."gui.pointer")
+SimplyLibrary.gui = {} --inits
+SimplyLibrary.gui.components = {} -- stores components
 
 --@@ UPDATE PARAMS
-function gui.update(dt)
+function SimplyLibrary.gui.update(dt)
 
 end
 
 --@@ DRAW COMPONENTS
-function gui.draw()
-    for i, component in ipairs(gui.components) do
+function SimplyLibrary.gui.draw()
+    for i, component in ipairs(SimplyLibrary.gui.components) do
         --@@ DRAW BUTTONS
-        gui.newButtonDraw(component)
+        SimplyLibrary.gui.newButtonDraw(component)
         --@@ DRAW POINTERS
-        gui.newPointerDraw(component)
+        SimplyLibrary.gui.newPointerDraw(component)
     end
 end
 
 --@@ INSERTS COMPONENT TO BE USABLE
-function gui.insertComponent(arr)
-    table.insert(gui.components,arr)
+function SimplyLibrary.gui.insertComponent(arr)
+    table.insert(SimplyLibrary.gui.components,arr)
     return arr 
 end
 
 --@@ COMPONENT TABLE RESET
-function gui.clear()
+function SimplyLibrary.gui.clear()
     gui.components = {}
     return true
 end
 
 --@@ COMPONENT MOUSEPRESSED
-function gui.mousepressed(x,y,button)
-    for i, b in ipairs(gui.components) do
+function SimplyLibrary.gui.mousepressed(x,y,button)
+    for i, b in ipairs(SimplyLibrary.gui.components) do
         if b.type == "button" then
             if  b.x < x + 1 and
                 x < b.x + b.w and
@@ -50,8 +46,8 @@ function gui.mousepressed(x,y,button)
 end
 
 --@@ COMPONENT MOUSERELEASED
-function gui.mousereleased(x,y,button)
-    for i, b in ipairs(gui.components) do
+function SimplyLibrary.gui.mousereleased(x,y,button)
+    for i, b in ipairs(SimplyLibrary.gui.components) do
         if b.type == "button" then
             if  b.x < x + 1 and
                 x < b.x + b.w and

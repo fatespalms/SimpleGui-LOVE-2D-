@@ -5,7 +5,7 @@
         var = gui.newPointer({image = image , quad = quad})
 @@]]
 
-function gui.newPointer(params)
+function SimplyLibrary.gui.newPointer(params)
     params = params or {}
     local pointer = {}
     --@@ POINTER TYPE
@@ -19,14 +19,11 @@ function gui.newPointer(params)
     pointer.image = params.image or error("pointer image can't be nil")
     pointer.quad  = params.quad or nil
     love.mouse.setVisible( false )
-    
-    return gui.insertComponent(pointer)
+    return SimplyLibrary.gui.insertComponent(pointer)
 end
 
-function gui.newPointerDraw(component)
-    
+function SimplyLibrary.gui.newPointerDraw(component)
     if component.type == "pointer" then
-       
         if component.quad == nil then
             love.graphics.draw(component.image,love.mouse.getPosition())
         else
