@@ -21,7 +21,7 @@ function gui.newButton(params)
     --@@ CHECK IF QUAD AND IMAGE IS AVAILABLE
     b.quad = params.quad or nil
     b.image = params.image or nil     
-    --@@ FUNCTION TO DO,
+    --@@ FUNCTION TO DO
     params.pressed = params.pressed or function() end
     params.released = params.released or function() end
     --@@ HOLDS PRESSED FUNCTIONS
